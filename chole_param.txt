@@ -1,0 +1,22 @@
+#The comment character is '#' and the delimiter character is ';'.
+#Coronal Hole Detection Parameters (from henney & harvey 2005)
+#Parameter; Value; Type; Comment
+dolimbdark; 1; I; switch to determine whether limb-darkening correction is to be applied
+domagcoscor; 1; I; perform a line-of-sight cosine correction on the LOS magnetogram
+dolinwidth; 1; I; run processing to generate an equivalent line width image
+doproject; 1; I; do the detection and area calculation in a projected equal shape or area space (projects and then unprojects)
+thresheqw; 0.1; F; the threshold value of equivalent width (values above 0.1*median(eq.wid.))
+threshuni; 0.85; F; the fractional unipolarity of a given CH detection measured from LOS magnetogram (at disk center)
+threshlon; 70.0; F; the maximum (abs) heliographic longitude considered (image is clipped at edges in HG space...)
+thresharea; 225.0; F; minimum number of [Mm^2] for a coronal hole
+kernopenrad; 16.0; F; radius of kernal used for opening procedure in [Mm] 
+kernclosrad; 16.0; F; radius of kernal used for closing procedure in [Mm] 
+fillval; 10000.0; F; value to fill thresholded candidate pixels with before smoothing
+pdataheii; ~/science/procedures/chole_detect/data/heii/; A; a path pointing to the source data directory for the He II input images
+pdatamag; ~/science/procedures/chole_detect/data/mag/; A; a path pointing to the source data directory for the magnetogram input images
+psave; ~/science/procedures/chole_detect/data/save/; A; a path pointing to the source data directory for the output save/ascii/fits files
+heiimiss; 0.0; F; the value for missing pixels in the He II images
+#magmiss; -NaN; F; the value for missing pixels in the magnetogram images
+magmiss; 0.0; F; the value for missing pixels in the magnetogram images
+nan; -NaN; F; handy filler value for not-a-number situations
+projscl; 2.0; F; the factor to rescale the projection by, relative to the original image array
