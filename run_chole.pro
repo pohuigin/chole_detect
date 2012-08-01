@@ -9,9 +9,9 @@ pro run_chole, time=time, fheii=fheii, fmag=fmag, $
 	chole_path=chole_path, chole_param=chole_param, params=inparams
 
 ;TEMP!
-fheii='~/science/procedures/chole_detect/data/heii/svsm_e3100_S2_20120706_2007.fts.gz'
-fmag='~/science/procedures/chole_detect/data/mag/svsm_m1100_S2_20120706_1728.fts.gz'
-time=anytim('06-jul-2012 16:00',/vms)
+fheii='~/science/procedures/chole_detect/data/heii/svsm_e3100_S2_20120718_1747.fts.gz' ;svsm_e3100_S2_20120706_2007.fts.gz'
+fmag='~/science/procedures/chole_detect/data/mag/svsm_m2100_S2_20120718_2055.fts.gz' ;svsm_m1100_S2_20120706_1728.fts.gz'
+time=anytim('18-jul-2012 20:00',/vms) ;anytim('06-jul-2012 16:00',/vms)
 
 ;Define paths and files to run the code
 chole_setup, chole_path=chole_path, chole_param=chole_param
